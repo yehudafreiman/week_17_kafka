@@ -5,7 +5,7 @@ import os
 
 
 KAFKA_BOOTSTRAP_SERVERS = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "kafka:29092")
-KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "customers_orders.registered")
+KAFKA_TOPIC = os.getenv("KAFKA_TOPIC", "customers_orders")
 producer = Producer({"bootstrap.servers": KAFKA_BOOTSTRAP_SERVERS})
 
 
