@@ -46,11 +46,11 @@ services:
       - mongo-data:/data/db
     networks:
       - app-network
-#    healthcheck:
-#      test: ["CMD", "mongosh", "--username", "admin", "--password", "password123", "--eval", "db.adminCommand('ping')"]
-#      interval: 10s
-#      timeout: 5s
-#      retries: 5
+    healthcheck:
+      test: ["CMD", "mongosh", "--username", "admin", "--password", "password123", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   # MySQL
   mysql:
